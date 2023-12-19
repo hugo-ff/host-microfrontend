@@ -1,0 +1,7 @@
+{
+  "name": "host-microfrontend",
+  "version": "1.0.0",
+  "repository": "git@github.com:hugo-ff/host-microfrontend.git",
+  "author": "Hugo Flotts <hugoflotts@outlook.com>",
+  "license": "MIT"
+}
