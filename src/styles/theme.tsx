@@ -7,17 +7,17 @@ const breakpoints = {
 };
 
 const colors = {
-  primary: '#4B4A60',
+  primary: '#2B6CB0',
   secondary: '#A4978E',
   success: '#689775',
-  danger: '#9B6A6C',
+  danger: '#E53E3E',
   warning: '#CABD80',
   info: '#6C8A82',
-  light: '#F4F3EE',
+  light: '#EDF2F7',
   lightGray: '#D3CFC8',
   darkGray: '#3B3940',
   white: '#FFFFFF',
-  dark: '#2F2D35',
+  dark: '#2D3748',
 };
 
 const typography = {

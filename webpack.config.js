@@ -6,23 +6,22 @@ const { dependencies } = require('./package.json');
 const ExternalTemplateRemotesPlugin = require('external-remotes-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  performance: {
+    hints: false,
+  },
   entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'host-microfrontend.js',
+    filename: 'host.microfrontend.js',
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    hot: true,
+    port: 3000,
     open: true,
-    port: '3000',
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
@@ -41,16 +40,17 @@ module.exports = {
       'process.env': JSON.stringify(process.env),
     }),
     new ModuleFederationPlugin({
-      name: 'hostMicrofrontend',
+      name: 'host',
       remotes: {
-        movie: `movieMicrofrontend@[movieUrl]/movie.js`,
-        tvShow: `tvShowMicrofrontend@[tvShowUrl]/tvshow.js`,
+        movieMicrofrontend: `movieMicrofrontend@[movieUrl]/movie.js`,
+        tvShowMicrofrontend: `tvShowMicrofrontend@[tvShowUrl]/tvshow.js`,
       },
       shared: {
         ...dependencies,
-        react: { singleton: true, requiredVersion: dependencies.react },
+        react: { singleton: true, eager: true, requiredVersion: dependencies.react },
         'react-dom': {
           singleton: true,
+          eager: true,
           requiredVersion: dependencies['react-dom'],
         },
       },

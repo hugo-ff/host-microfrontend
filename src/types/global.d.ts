@@ -1,7 +1,7 @@
 declare global {
   interface Window {
-    movieMicrofrontend: string;
-    tvShowMicrofrontend: string;
+    movieUrl: string;
+    tvShowUrl: string;
   }
 }
 
