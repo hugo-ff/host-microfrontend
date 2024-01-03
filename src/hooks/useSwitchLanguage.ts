@@ -1,8 +1,8 @@
 import { TFunction } from 'i18next';
 // eslint-disable-next-line import/no-unresolved
-import useSwitchMovieMFELanguage from 'movieMicrofrontend/hooks/useSwitchMovieMFELanguage';
+import useSwitchMovieMFELanguage from 'movie/hooks/useSwitchMovieMFELanguage';
 // eslint-disable-next-line import/no-unresolved
-import useSwitchTvShowMFELanguage from 'tvShowMicrofrontend/hooks/useSwitchTvShowMFELanguage';
+import useSwitchTvShowMFELanguage from 'tvShow/hooks/useSwitchTvShowMFELanguage';
 
 import appInstance from '../i18n';
 

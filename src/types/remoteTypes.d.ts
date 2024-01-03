@@ -1,21 +1,25 @@
 ///<reference types="react" />
 
-declare module 'movieMicrofrontend/Movie' {
-  const movieMicrofrontend: React.ComponentType;
+declare module 'movie/Movie' {
+  const movie: React.ComponentType;
   export default Movie;
 }
 
-declare module 'movieMicrofrontend/hooks/useSwitchMovieMFELanguage' {
-  const movieMicrofrontend: React.ComponentType;
+declare module 'movie/hooks/useSwitchMovieMFELanguage' {
+  const movie: React.ComponentType;
   export default useSwitchMovieMFELanguage;
 }
 
-declare module 'tvShowMicrofrontend/TvShow' {
-  const tvShowMicrofrontend: React.ComponentType;
+declare module 'tvShow/TvShow' {
+  const tvShow: React.ComponentType;
   export default TvShow;
 }
 
-declare module 'tvShowMicrofrontend/hooks/useSwitchTvShowMFELanguage' {
-  const tvShowMicrofrontend: React.ComponentType;
+declare module 'tvShow/hooks/useSwitchTvShowMFELanguage' {
+  const tvShow: React.ComponentType;
   export default useSwitchTvShowMFELanguage;
+}
+
+declare module 'tvshow/TvShowApp' {
+  export const mount: (el: HTMLElement) => void;
 }

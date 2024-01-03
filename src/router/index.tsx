@@ -7,9 +7,9 @@ import { Error } from '../components/pages/Error';
 import { Host } from '../components/pages/Host';
 
 // eslint-disable-next-line import/no-unresolved
-const Movie = React.lazy(() => import('movieMicrofrontend/Movie'));
+const Movie = React.lazy(() => import('movie/Movie'));
 // eslint-disable-next-line import/no-unresolved
-const TvShow = React.lazy(() => import('tvShowMicrofrontend/TvShow'));
+const TvShow = React.lazy(() => import('tvShow/TvShow'));
 
 export const router = createHashRouter([
   {

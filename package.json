@@ -5,9 +5,9 @@
   "author": "Hugo Flotts <hugoflotts@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn clean && webpack --config webpack.config.js",
+    "build": "yarn clean && webpack --config config/webpack.prod.js",
     "start": "webpack-dev-server --open --hot",
-    "serve:dev": "webpack serve",
+    "serve:dev": "webpack serve --config config/webpack.dev.js",
     "serve": "yarn build && serve dist -p 3000",
     "clean": "rm -rf dist",
     "test": "jest --watch --config=jest.config.js --passWithNoTests",
@@ -80,6 +80,7 @@
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.10.0"
   }
 }

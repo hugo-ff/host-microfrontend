@@ -42,8 +42,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'host',
       remotes: {
-        movieMicrofrontend: `movieMicrofrontend@[movieUrl]/movie.js`,
-        tvShowMicrofrontend: `tvShowMicrofrontend@[tvShowUrl]/tvshow.js`,
+        movie: `movie@[movieUrl]/remoteEntry.js`,
+        tvShow: `tvShow@[tvShowUrl]/remoteEntry.js`,
       },
       shared: {
         ...dependencies,

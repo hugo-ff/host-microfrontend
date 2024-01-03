@@ -16,5 +16,5 @@
     "jsx": "react-jsx",
     "outDir": "./dist/"
   },
-  "include": ["src", "*.js"]
+  "include": ["src", "*.js", "config/**/*.js"]
 }
