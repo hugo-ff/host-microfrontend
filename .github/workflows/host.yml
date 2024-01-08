@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '/**'
-
-defaults:
-  run:
-    working-directory: /
 
 jobs:
   build:
@@ -17,8 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn build
+      - run: yarn ci
 
       - uses: chrislennon/action-aws-cli@v1.1
       - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/host/latest
